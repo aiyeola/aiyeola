@@ -1,0 +1,652 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Pro&display=swap");
+@-webkit-keyframes header {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes header {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 10px 15px;
+  z-index: 100;
+}
+
+@media (max-width: 425px) {
+  header {
+    position: fixed;
+  }
+}
+
+header.sticky {
+  position: fixed;
+  background-color: #222222;
+  -webkit-animation: header 0.5s ease;
+          animation: header 0.5s ease;
+}
+
+@media (max-width: 425px) {
+  header .container {
+    position: relative;
+  }
+}
+
+header .container .trigger-main {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  display: none;
+}
+
+header .container .trigger-main .active span:nth-child(1) {
+  -webkit-transform: rotate(45deg) translateY(-7px);
+          transform: rotate(45deg) translateY(-7px);
+}
+
+header .container .trigger-main .active span:nth-child(2) {
+  -webkit-transform: rotate(-45deg) translateY(7px);
+          transform: rotate(-45deg) translateY(7px);
+}
+
+header .container .trigger-main a {
+  display: inline-block;
+  position: relative;
+  z-index: 210;
+}
+
+header .container .trigger-main a span {
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: #ffffff;
+  margin-bottom: 8px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+header .container .trigger-main a span:nth-child(1) {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+
+header .container .trigger-main a span:nth-child(2) {
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+@media (max-width: 425px) {
+  header .container .trigger-main {
+    display: block;
+  }
+}
+
+header .container .navbar {
+  float: right;
+}
+
+@media (max-width: 425px) {
+  header .container .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 180px;
+    background-color: #222222;
+    z-index: 200;
+    padding-top: 80px;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  }
+  header .container .navbar.open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+header .container .navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .container .navbar ul li {
+  display: inline;
+  padding: 0 15px;
+}
+
+@media (max-width: 425px) {
+  header .container .navbar ul li {
+    display: block;
+  }
+}
+
+header .container .navbar ul li a {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #ffffff;
+  position: relative;
+}
+
+header .container .navbar ul li a.active::before {
+  width: 100%;
+}
+
+header .container .navbar ul li a:hover::before {
+  width: 100%;
+}
+
+.about .container h2.title, .my-work .container h2.title, footer .container h2.title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 70px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #eb9321;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 425px) {
+  .about .container h2.title, .my-work .container h2.title, footer .container h2.title {
+    font-size: 25px;
+  }
+}
+
+.about .container .about-content, .my-work .container .about-content, footer .container .about-content, .about footer .container .footer-content, footer .about .container .footer-content, .my-work footer .container .footer-content, footer .my-work .container .footer-content, footer .container .footer-content, .my-work .container .work-content {
+  width: 100%;
+}
+
+header .container .navbar ul li a::before, .my-work .container .work-content .card .box::before {
+  content: "";
+  position: absolute;
+  background-color: #eb9321;
+  top: 100%;
+  left: 0;
+  width: 0;
+  margin-top: -5px;
+  height: 2px;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+
+.about .container .about-content .description a, .my-work .container .about-content .description a, footer .container .about-content .description a, .about footer .container .footer-content .description a, footer .about .container .footer-content .description a, .my-work footer .container .footer-content .description a, footer .my-work .container .footer-content .description a, footer .container .footer-content .description a, .my-work .container .work-content .card .box .link-source a {
+  padding: 12px 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #eb9321;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: 1px solid #eb9321;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.about .container .about-content .description a:hover, .my-work .container .about-content .description a:hover, footer .container .about-content .description a:hover, footer .container .footer-content .description a:hover, .my-work .container .work-content .card .box .link-source a:hover {
+  color: #eb9321;
+  background-color: transparent;
+}
+
+@media (max-width: 425px) {
+  .about .container .about-content .description a, .my-work .container .about-content .description a, footer .container .about-content .description a, .about footer .container .footer-content .description a, footer .about .container .footer-content .description a, .my-work footer .container .footer-content .description a, footer .my-work .container .footer-content .description a, footer .container .footer-content .description a, .my-work .container .work-content .card .box .link-source a {
+    font-size: 0.9rem;
+    padding: 10px 30px;
+  }
+}
+
+header .container, .home .container, .about .container, .my-work .container, footer .container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  header .container, .home .container, .about .container, .my-work .container, footer .container {
+    max-width: 765px;
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+
+.home {
+  min-height: 100vh;
+  background-image: url("/image/background.jpg");
+  background-size: cover;
+  background-position: center;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000000;
+  opacity: 0.7;
+}
+
+.home .container .home-text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: auto;
+  padding: 0 15px;
+  z-index: 10;
+  margin-left: 1rem;
+}
+
+@media (max-width: 425px) {
+  .home .container .home-text {
+    left: 0;
+  }
+}
+
+.home .container .home-text h1 {
+  font-size: 35px;
+  color: #ffffff;
+  margin: 10px 0;
+  -webkit-animation: slideLeft 1s ease-out;
+          animation: slideLeft 1s ease-out;
+}
+
+.home .container .home-text h3, .home .my-work .container .home-text .work-content .card .box h4, .my-work .home .container .home-text .work-content .card .box h4, .home .my-work .container .work-content .card .box .home-text h4, .my-work .home .container .work-content .card .box .home-text h4, .home .my-work .container .home-text .work-content .card .box .about-content .description h5, .my-work .home .container .home-text .work-content .card .box .about-content .description h5, .home .my-work .container .work-content .card .box .about-content .description .home-text h5, .my-work .home .container .work-content .card .box .about-content .description .home-text h5, .home .my-work .container .home-text .about-content .description .work-content .card .box h5, .my-work .home .container .home-text .about-content .description .work-content .card .box h5, .home .my-work .container .about-content .description .work-content .card .box .home-text h5, .my-work .home .container .about-content .description .work-content .card .box .home-text h5, .home .my-work footer .container .home-text .work-content .card .box .footer-content .description h5, .my-work footer .home .container .home-text .work-content .card .box .footer-content .description h5, .home .my-work footer .container .work-content .card .box .footer-content .description .home-text h5, .my-work footer .home .container .work-content .card .box .footer-content .description .home-text h5, .home footer .my-work .container .home-text .work-content .card .box .footer-content .description h5, footer .my-work .home .container .home-text .work-content .card .box .footer-content .description h5, .home footer .my-work .container .work-content .card .box .footer-content .description .home-text h5, footer .my-work .home .container .work-content .card .box .footer-content .description .home-text h5, .home .my-work footer .container .home-text .footer-content .description .work-content .card .box h5, .my-work footer .home .container .home-text .footer-content .description .work-content .card .box h5, .home .my-work footer .container .footer-content .description .work-content .card .box .home-text h5, .my-work footer .home .container .footer-content .description .work-content .card .box .home-text h5, .home footer .my-work .container .home-text .footer-content .description .work-content .card .box h5, footer .my-work .home .container .home-text .footer-content .description .work-content .card .box h5, .home footer .my-work .container .footer-content .description .work-content .card .box .home-text h5, footer .my-work .home .container .footer-content .description .work-content .card .box .home-text h5 {
+  font-size: 60px;
+  color: #eb9321;
+  margin: 15px 0 0;
+  font-weight: 700;
+  width: 100%;
+  animation: fadeIn 1.7s linear reverse;
+  overflow: wrap;
+}
+
+@media (max-width: 768px) {
+  .home .container .home-text h3, .home .my-work .container .home-text .work-content .card .box h4, .my-work .home .container .home-text .work-content .card .box h4, .home .my-work .container .work-content .card .box .home-text h4, .my-work .home .container .work-content .card .box .home-text h4, .home .my-work .container .home-text .work-content .card .box .about-content .description h5, .my-work .home .container .home-text .work-content .card .box .about-content .description h5, .home .my-work .container .work-content .card .box .about-content .description .home-text h5, .my-work .home .container .work-content .card .box .about-content .description .home-text h5, .home .my-work .container .home-text .about-content .description .work-content .card .box h5, .my-work .home .container .home-text .about-content .description .work-content .card .box h5, .home .my-work .container .about-content .description .work-content .card .box .home-text h5, .my-work .home .container .about-content .description .work-content .card .box .home-text h5, .home .my-work footer .container .home-text .work-content .card .box .footer-content .description h5, .my-work footer .home .container .home-text .work-content .card .box .footer-content .description h5, .home .my-work footer .container .work-content .card .box .footer-content .description .home-text h5, .my-work footer .home .container .work-content .card .box .footer-content .description .home-text h5, .home footer .my-work .container .home-text .work-content .card .box .footer-content .description h5, footer .my-work .home .container .home-text .work-content .card .box .footer-content .description h5, .home footer .my-work .container .work-content .card .box .footer-content .description .home-text h5, footer .my-work .home .container .work-content .card .box .footer-content .description .home-text h5, .home .my-work footer .container .home-text .footer-content .description .work-content .card .box h5, .my-work footer .home .container .home-text .footer-content .description .work-content .card .box h5, .home .my-work footer .container .footer-content .description .work-content .card .box .home-text h5, .my-work footer .home .container .footer-content .description .work-content .card .box .home-text h5, .home footer .my-work .container .home-text .footer-content .description .work-content .card .box h5, footer .my-work .home .container .home-text .footer-content .description .work-content .card .box h5, .home footer .my-work .container .footer-content .description .work-content .card .box .home-text h5, footer .my-work .home .container .footer-content .description .work-content .card .box .home-text h5 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .home .container .home-text h3, .home .my-work .container .home-text .work-content .card .box h4, .my-work .home .container .home-text .work-content .card .box h4, .home .my-work .container .work-content .card .box .home-text h4, .my-work .home .container .work-content .card .box .home-text h4, .home .my-work .container .home-text .work-content .card .box .about-content .description h5, .my-work .home .container .home-text .work-content .card .box .about-content .description h5, .home .my-work .container .work-content .card .box .about-content .description .home-text h5, .my-work .home .container .work-content .card .box .about-content .description .home-text h5, .home .my-work .container .home-text .about-content .description .work-content .card .box h5, .my-work .home .container .home-text .about-content .description .work-content .card .box h5, .home .my-work .container .about-content .description .work-content .card .box .home-text h5, .my-work .home .container .about-content .description .work-content .card .box .home-text h5, .home .my-work footer .container .home-text .work-content .card .box .footer-content .description h5, .my-work footer .home .container .home-text .work-content .card .box .footer-content .description h5, .home .my-work footer .container .work-content .card .box .footer-content .description .home-text h5, .my-work footer .home .container .work-content .card .box .footer-content .description .home-text h5, .home footer .my-work .container .home-text .work-content .card .box .footer-content .description h5, footer .my-work .home .container .home-text .work-content .card .box .footer-content .description h5, .home footer .my-work .container .work-content .card .box .footer-content .description .home-text h5, footer .my-work .home .container .work-content .card .box .footer-content .description .home-text h5, .home .my-work footer .container .home-text .footer-content .description .work-content .card .box h5, .my-work footer .home .container .home-text .footer-content .description .work-content .card .box h5, .home .my-work footer .container .footer-content .description .work-content .card .box .home-text h5, .my-work footer .home .container .footer-content .description .work-content .card .box .home-text h5, .home footer .my-work .container .home-text .footer-content .description .work-content .card .box h5, footer .my-work .home .container .home-text .footer-content .description .work-content .card .box h5, .home footer .my-work .container .footer-content .description .work-content .card .box .home-text h5, footer .my-work .home .container .footer-content .description .work-content .card .box .home-text h5 {
+    font-size: 40px;
+  }
+}
+
+.home .container .home-text .icons {
+  margin-top: 15px;
+  animation: fadeIn 2s linear reverse;
+}
+
+.home .container .home-text .icons a {
+  padding: 0.4rem;
+  color: #ffffff;
+}
+
+.home .container .home-text .icons a:hover, .home .container .home-text .icons a:active {
+  color: #eb9321;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.about, .my-work, footer {
+  float: left;
+  width: 100%;
+  padding: 80px 0px;
+  background-color: #292929;
+}
+
+@media (max-width: 425px) {
+  .about .container, .my-work .container, footer .container {
+    margin-top: -3rem;
+  }
+}
+
+.about .container h2.title::before, .my-work .container h2.title::before, footer .container h2.title::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  left: 50%;
+  top: 50px;
+  background-color: #eb9321;
+  margin-left: -40px;
+}
+
+.about .container .about-content .img, .my-work .container .about-content .img, footer .container .about-content .img, .about footer .container .footer-content .img, footer .about .container .footer-content .img, .my-work footer .container .footer-content .img, footer .my-work .container .footer-content .img, footer .container .footer-content .img {
+  float: left;
+  width: 35%;
+  padding: 15px;
+}
+
+@media (max-width: 425px) {
+  .about .container .about-content .img, .my-work .container .about-content .img, footer .container .about-content .img, .about footer .container .footer-content .img, footer .about .container .footer-content .img, .my-work footer .container .footer-content .img, footer .my-work .container .footer-content .img, footer .container .footer-content .img {
+    width: 100%;
+    padding: 15px 15%;
+    margin-top: -1rem;
+  }
+}
+
+.about .container .about-content .img img, .my-work .container .about-content .img img, footer .container .about-content .img img, .about footer .container .footer-content .img img, footer .about .container .footer-content .img img, .my-work footer .container .footer-content .img img, footer .my-work .container .footer-content .img img, footer .container .footer-content .img img {
+  width: 78%;
+  border-radius: 51% 49% 13% 87% / 55% 33% 67% 45%;
+  border: #eb9321 2px solid;
+}
+
+@media (max-width: 687px) {
+  .about .container .about-content .img img, .my-work .container .about-content .img img, footer .container .about-content .img img, .about footer .container .footer-content .img img, footer .about .container .footer-content .img img, .my-work footer .container .footer-content .img img, footer .my-work .container .footer-content .img img, footer .container .footer-content .img img {
+    width: 60%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 425px) {
+  .about .container .about-content .img img, .my-work .container .about-content .img img, footer .container .about-content .img img, .about footer .container .footer-content .img img, footer .about .container .footer-content .img img, .my-work footer .container .footer-content .img img, footer .my-work .container .footer-content .img img, footer .container .footer-content .img img {
+    width: 100%;
+  }
+}
+
+.about .container .about-content .description, .my-work .container .about-content .description, footer .container .about-content .description, .about footer .container .footer-content .description, footer .about .container .footer-content .description, .my-work footer .container .footer-content .description, footer .my-work .container .footer-content .description, footer .container .footer-content .description {
+  float: left;
+  width: 65%;
+  padding: 15px;
+  font-family: "Crimson Pro", serif;
+}
+
+@media (max-width: 425px) {
+  .about .container .about-content .description, .my-work .container .about-content .description, footer .container .about-content .description, .about footer .container .footer-content .description, footer .about .container .footer-content .description, .my-work footer .container .footer-content .description, footer .my-work .container .footer-content .description, footer .container .footer-content .description {
+    width: 100%;
+  }
+}
+
+.about .container .about-content .description h4, .my-work .container .about-content .description h4, footer .container .about-content .description h4, .about footer .container .footer-content .description h4, footer .about .container .footer-content .description h4, .my-work footer .container .footer-content .description h4, footer .my-work .container .footer-content .description h4, footer .container .footer-content .description h4, .about .container .about-content .description h5, footer .about .container .about-content .description h5, .about footer .container .about-content .description h5, .about .my-work .container .about-content .description h5, .my-work .about .container .about-content .description h5, .my-work .container .about-content .description h5, footer .my-work .container .about-content .description h5, .my-work footer .container .about-content .description h5, .about footer .container .about-content .description h5, footer .about .container .about-content .description h5, .my-work footer .container .about-content .description h5, footer .my-work .container .about-content .description h5, footer .container .about-content .description h5, footer .container .footer-content .about-content .description h5, footer .container .about-content .footer-content .description h5, .about footer .container .footer-content .description h5, footer .about footer .container .footer-content .description h5, .about footer .container .footer-content .description h5, .about footer .about .container .footer-content .description h5, footer .about .container .footer-content .description h5, footer .about .container .footer-content .description h5, .about .my-work footer .container .footer-content .description h5, .my-work .about footer .container .footer-content .description h5, .my-work footer .about .container .footer-content .description h5, .my-work footer .container .footer-content .description h5, footer .my-work footer .container .footer-content .description h5, .my-work footer .container .footer-content .description h5, .about footer .my-work .container .footer-content .description h5, footer .about .my-work .container .footer-content .description h5, footer .my-work .about .container .footer-content .description h5, .my-work footer .my-work .container .footer-content .description h5, footer .my-work .container .footer-content .description h5, footer .my-work .container .footer-content .description h5, .about footer .container .about-content .footer-content .description h5, footer .about .container .about-content .footer-content .description h5, .about footer .container .footer-content .about-content .description h5, footer .about .container .footer-content .about-content .description h5, .my-work footer .container .about-content .footer-content .description h5, footer .my-work .container .about-content .footer-content .description h5, .my-work footer .container .footer-content .about-content .description h5, footer .my-work .container .footer-content .about-content .description h5, footer .container .about-content .footer-content .description h5, footer .container .footer-content .about-content .description h5, .about footer .container .footer-content .description h5, footer .about .container .footer-content .description h5, .my-work footer .container .footer-content .description h5, footer .my-work .container .footer-content .description h5, footer .container .footer-content .description h5 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.about .container .about-content .description h5, .my-work .container .about-content .description h5, footer .container .about-content .description h5, .about footer .container .footer-content .description h5, footer .about .container .footer-content .description h5, .my-work footer .container .footer-content .description h5, footer .my-work .container .footer-content .description h5, footer .container .footer-content .description h5 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.about .container .about-content .description p, .my-work .container .about-content .description p, footer .container .about-content .description p, .about footer .container .footer-content .description p, footer .about .container .footer-content .description p, .my-work footer .container .footer-content .description p, footer .my-work .container .footer-content .description p, footer .container .footer-content .description p {
+  color: #c2c0c3;
+  font-size: 1rem;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  .about .container .about-content .description p:last-child, .my-work .container .about-content .description p:last-child, footer .container .about-content .description p:last-child, .about footer .container .footer-content .description p:last-child, footer .about .container .footer-content .description p:last-child, .my-work footer .container .footer-content .description p:last-child, footer .my-work .container .footer-content .description p:last-child, footer .container .footer-content .description p:last-child {
+    text-align: center;
+  }
+}
+
+.about .container .about-content .description a, .my-work .container .about-content .description a, footer .container .about-content .description a, .about footer .container .footer-content .description a, footer .about .container .footer-content .description a, .my-work footer .container .footer-content .description a, footer .my-work .container .footer-content .description a, footer .container .footer-content .description a {
+  font-family: "Raleway", sans-serif;
+}
+
+.about .container .about-content .description a:hover, .my-work .container .about-content .description a:hover, footer .container .about-content .description a:hover, .about footer .container .footer-content .description a:hover, footer .about .container .footer-content .description a:hover, .my-work footer .container .footer-content .description a:hover, footer .my-work .container .footer-content .description a:hover, footer .container .footer-content .description a:hover, .about .container .about-content .description a:active, .my-work .container .about-content .description a:active, footer .container .about-content .description a:active, .about footer .container .footer-content .description a:active, footer .about .container .footer-content .description a:active, .my-work footer .container .footer-content .description a:active, footer .my-work .container .footer-content .description a:active, footer .container .footer-content .description a:active {
+  color: #eb9321;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.my-work .container h3, .my-work .container .work-content .card .box h4, .my-work .container .work-content .card .box .about-content .description h5, .my-work .container .about-content .description .work-content .card .box h5, .my-work footer .container .work-content .card .box .footer-content .description h5, footer .my-work .container .work-content .card .box .footer-content .description h5, .my-work footer .container .footer-content .description .work-content .card .box h5, footer .my-work .container .footer-content .description .work-content .card .box h5 {
+  color: #ffffff;
+  margin: -1rem 2rem 2rem;
+}
+
+.my-work .container .work-content .card {
+  padding: 1rem;
+}
+
+@media (max-width: 425px) {
+  .my-work .container .work-content .card {
+    width: 100%;
+  }
+}
+
+.my-work .container .work-content .card .box {
+  background-color: #353535;
+  padding: 15px;
+  position: relative;
+  float: left;
+  width: 45%;
+  margin: 0 1rem;
+  height: 500px;
+}
+
+@media (max-width: 768px) {
+  .my-work .container .work-content .card .box {
+    height: 350px;
+  }
+}
+
+@media (max-width: 687px) {
+  .my-work .container .work-content .card .box {
+    width: 90%;
+    margin: 0 2rem 10rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .my-work .container .work-content .card .box {
+    height: 320px;
+    width: 80%;
+    margin: 0 2.5rem 6rem;
+  }
+  .my-work .container .work-content .card .box:last-child {
+    height: 300px;
+  }
+}
+
+.my-work .container .work-content .card .box::before {
+  top: 0;
+}
+
+.my-work .container .work-content .card .box:hover::before {
+  width: 100%;
+}
+
+.my-work .container .work-content .card .box h3, .my-work .container .work-content .card .box h4, .my-work .container .work-content .card .box .about-content .description h5, .my-work .container .about-content .description .work-content .card .box h5, .my-work footer .container .work-content .card .box .footer-content .description h5, footer .my-work .container .work-content .card .box .footer-content .description h5, .my-work footer .container .footer-content .description .work-content .card .box h5, footer .my-work .container .footer-content .description .work-content .card .box h5 {
+  margin: 0;
+  padding: 15px 0 5px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.my-work .container .work-content .card .box h4, .my-work .container .work-content .card .box .about-content .description h5, .my-work .container .about-content .description .work-content .card .box h5, .my-work footer .container .work-content .card .box .footer-content .description h5, footer .my-work .container .work-content .card .box .footer-content .description h5, .my-work footer .container .footer-content .description .work-content .card .box h5, footer .my-work .container .footer-content .description .work-content .card .box h5 {
+  color: #eb9321;
+  padding: 5px 0px 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.my-work .container .work-content .card .box img {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 425px) {
+  .my-work .container .work-content .card .box img {
+    height: 200px;
+  }
+}
+
+.my-work .container .work-content .card .box img:hover {
+  opacity: 0.5;
+}
+
+.my-work .container .work-content .card .box .link-source {
+  width: 100%;
+}
+
+@media (max-width: 425px) {
+  .my-work .container .work-content .card .box .link-source {
+    text-align: center;
+  }
+}
+
+.my-work .container .work-content .card .box .link-source a {
+  margin-top: 0rem;
+  width: 11px;
+}
+
+@media (max-width: 425px) {
+  .my-work .container .work-content .card .box .link-source a {
+    min-height: 11px;
+    width: 15px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+footer {
+  padding: 50px 0px;
+}
+
+footer .container {
+  border-top: #353535 1px solid;
+}
+
+footer .container .footer-content .box {
+  margin-top: 1.2rem;
+  width: 33.3%;
+  float: left;
+  padding: 15px;
+  text-align: center;
+}
+
+@media (max-width: 425px) {
+  footer .container .footer-content .box {
+    width: 100%;
+  }
+}
+
+footer .container .footer-content .box .icon {
+  color: #eb9321;
+  font-size: 25px;
+}
+
+footer .container .footer-content .box h4, footer .container .footer-content .box .about-content .description h5, footer .container .about-content .description .footer-content .box h5, .about footer .container .footer-content .box .description h5, .about footer .container .footer-content .description .box h5, footer .about .container .footer-content .box .description h5, footer .about .container .footer-content .description .box h5, .my-work footer .container .footer-content .box .description h5, .my-work footer .container .footer-content .description .box h5, footer .my-work .container .footer-content .box .description h5, footer .my-work .container .footer-content .description .box h5, footer .container .footer-content .box .description h5, footer .container .footer-content .description .box h5 {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 600;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+
+footer .container .footer-content .box p {
+  color: #c2c0c3;
+  font-size: 1rem;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding: 10px 0;
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */

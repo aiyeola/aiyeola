@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Pro&display=swap");
+
+$text-color: #ffffff;
+$secondary-color: #eb9321;
+$bg-responsive: #222222;
+
+// Responsive
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media (max-width: 687px) {
+    @content;
+  }
+}
+
+@mixin smartPhone {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@import "header";
+
+%title-text {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 70px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $secondary-color;
+  position: relative;
+  letter-spacing: 0.5px;
+
+  @include smartPhone {
+    font-size: 25px;
+  }
+}
+%content {
+  width: 100%;
+  // float: left;
+}
+
+%hover-style {
+  content: "";
+  position: absolute;
+  background-color: $secondary-color;
+  top: 100%;
+  left: 0;
+  width: 0;
+  margin-top: -5px;
+  height: 2px;
+  transition: width 0.5s ease;
+}
+
+%button-style {
+  padding: 12px 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $text-color;
+  background-color: $secondary-color;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: 1px solid $secondary-color;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $secondary-color;
+    background-color: transparent;
+  }
+
+  @include smartPhone {
+    font-size: 0.9rem;
+    padding: 10px 30px;
+  }
+}
+
+%container-width {
+  max-width: 1170px;
+  margin: auto;
+
+  @include tablet {
+    max-width: 765px;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+
+.home {
+  min-height: 100vh;
+  background-image: url("/image/background.jpg");
+  background-size: cover;
+  background-position: center;
+  float: left;
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #000000;
+    opacity: 0.7;
+  }
+
+  .container {
+    @extend %container-width;
+
+    .home-text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: auto;
+      padding: 0 15px;
+      z-index: 10;
+      margin-left: 1rem;
+
+      @include smartPhone {
+        left: 0;
+      }
+
+      h1 {
+        font-size: 35px;
+        color: $text-color;
+        margin: 10px 0;
+        animation: slideLeft 1s ease-out;
+      }
+
+      h3 {
+        font-size: 60px;
+        color: $secondary-color;
+        margin: 15px 0 0;
+        font-weight: 700;
+        width: 100%;
+        animation: fadeIn 1.7s linear reverse;
+        overflow: wrap;
+
+        @include tablet {
+          font-size: 50px;
+        }
+
+        @include smartPhone {
+          font-size: 40px;
+        }
+      }
+
+      .icons {
+        margin-top: 15px;
+        animation: fadeIn 2s linear reverse;
+
+        a {
+          padding: 0.4rem;
+          color: $text-color;
+
+          &:hover,
+          &:active {
+            color: $secondary-color;
+            transition: all 0.5s ease-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about {
+  float: left;
+  width: 100%;
+  padding: 80px 0px;
+  background-color: #292929;
+
+  .container {
+    @extend %container-width;
+
+    @include smartPhone {
+      margin-top: -3rem;
+    }
+
+    h2.title {
+      @extend %title-text;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 2px;
+        left: 50%;
+        top: 50px;
+        background-color: $secondary-color;
+        margin-left: -40px;
+      }
+    }
+
+    .about-content {
+      @extend %content;
+
+      .img {
+        float: left;
+        width: 35%;
+        padding: 15px;
+
+        @include smartPhone {
+          width: 100%;
+          padding: 15px 15%;
+          margin-top: -1rem;
+        }
+
+        img {
+          width: 78%;
+          border-radius: 51% 49% 13% 87% / 55% 33% 67% 45%;
+          border: $secondary-color 2px solid;
+
+          @include mediaMd {
+            width: 60%;
+            height: 60%;
+          }
+
+          @include smartPhone {
+            width: 100%;
+          }
+        }
+      }
+
+      .description {
+        float: left;
+        width: 65%;
+        padding: 15px;
+        font-family: "Crimson Pro", serif;
+
+        @include smartPhone {
+          width: 100%;
+        }
+
+        h4 {
+          font-size: 20px;
+          color: $text-color;
+          margin: 0;
+          padding-bottom: 10px;
+          font-weight: 400;
+        }
+
+        h5 {
+          @extend h4;
+          font-size: 25px;
+          font-weight: 600;
+        }
+
+        p {
+          color: #c2c0c3;
+          font-size: 1rem;
+          line-height: 25px;
+          letter-spacing: 0.5px;
+          margin-bottom: 20px ;
+
+          @include smartPhone {
+            &:last-child {
+              text-align: center;
+            }
+          }
+        }
+
+        a {
+          @extend %button-style;
+       
+          font-family: "Raleway", sans-serif;
+
+          &:hover,
+          &:active {
+            color: $secondary-color;
+            transition: all 0.5s ease-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+.my-work {
+  @extend .about;
+
+  .container {
+    @extend %container-width;
+
+    h2.title {
+      @extend %title-text;
+    }
+
+    h3 {
+      color: $text-color;
+      margin: -1rem 2rem 2rem;
+    }
+
+    .work-content {
+      @extend %content;
+
+      .card {
+        padding: 1rem;
+
+        @include smartPhone {
+          // float: left;
+          width: 100%;
+        }
+
+        .box {
+          background-color: #353535;
+          padding: 15px;
+          position: relative;
+          float: left;
+          width: 45%;
+          margin: 0 1rem;
+          height: 500px;
+
+          @include tablet {
+            height: 350px;
+          }
+
+          @include mediaMd {
+            width: 90%;
+            margin: 0 2rem 10rem;
+          }
+
+          @include smartPhone {
+            height: 320px;
+            width: 80%;
+            margin: 0 2.5rem 6rem;
+
+            &:last-child {
+              height: 300px;
+            }
+          }
+
+          &::before {
+            @extend %hover-style;
+            top: 0;
+          }
+
+          &:hover::before {
+            width: 100%;
+          }
+
+          h3 {
+            margin: 0;
+            padding: 15px 0 5px;
+            color: $text-color;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+          }
+
+          h4 {
+            @extend h3;
+            color: $secondary-color;
+            padding: 5px 0px 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+
+          img {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 2rem;
+
+            @include smartPhone {
+              height: 200px;
+            }
+
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+
+          .link-source {
+            width: 100%;
+
+            @include smartPhone {
+              text-align: center;
+            }
+
+            a {
+              @extend %button-style;
+              margin-top: 0rem;
+              width: 11px;
+
+              @include smartPhone {
+                min-height: 11px;
+                width: 15px;
+                padding: 0.5rem 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  @extend .about;
+  padding: 50px 0px;
+
+  .container {
+    @extend %container-width;
+    border-top: #353535 1px solid;
+
+    .footer-content {
+      @extend .about-content;
+
+      .box {
+        margin-top: 1.2rem;
+        width: 33.3%;
+        float: left;
+        padding: 15px;
+        text-align: center;
+
+        @include smartPhone {
+          width: 100%;
+        }
+
+        .icon {
+          color: $secondary-color;
+          font-size: 25px;
+        }
+
+        h4 {
+          font-size: 1rem;
+          color: $text-color;
+          margin: 0;
+          font-weight: 600;
+          padding: 20px 0;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: #c2c0c3;
+          font-size: 1rem;
+          line-height: 25px;
+          letter-spacing: 0.5px;
+          font-weight: 400;
+          padding: 10px 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

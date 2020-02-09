@@ -1,0 +1,137 @@
+@keyframes header {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 10px 15px;
+  z-index: 100;
+
+  @include smartPhone {
+    position: fixed;
+  }
+
+  &.sticky {
+    position: fixed;
+    background-color: #222222;
+    animation: header 0.5s ease;
+  }
+
+  .container {
+    @extend %container-width;
+
+    @include smartPhone {
+      position: relative;
+    }
+
+    .trigger-main {
+      position: absolute;
+      top: 25px;
+      right: 0;
+      display: none;
+
+      .active {
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg) translateY(-7px);
+          }
+          &:nth-child(2) {
+            transform: rotate(-45deg) translateY(7px);
+          }
+        }
+      }
+
+      a {
+        display: inline-block;
+        position: relative;
+        z-index: 210;
+
+        span {
+          display: block;
+          height: 2px;
+          width: 30px;
+          background-color: $text-color;
+          margin-bottom: 8px;
+          transition: transform 0.5s ease;
+
+          &:nth-child(1) {
+            transform-origin: left top;
+          }
+
+          &:nth-child(2) {
+            transform-origin: left bottom;
+          }
+        }
+      }
+
+      @include smartPhone {
+        display: block;
+      }
+    }
+
+    .navbar {
+      float: right;
+
+      @include smartPhone {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 180px;
+        background-color: $bg-responsive;
+        z-index: 200;
+        padding-top: 80px;
+        transform: translateX(100%);
+        transition: transform 0.5s ease;
+
+        &.open {
+          transform: translateX(0);
+        }
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline;
+          padding: 0 15px;
+
+          @include smartPhone {
+            display: block;
+          }
+
+          a {
+            display: inline-block;
+            padding: 10px 0;
+            font-size: 1rem;
+            text-transform: capitalize;
+            color: $text-color;
+            position: relative;
+
+            &::before {
+              @extend %hover-style;
+            }
+
+            &.active::before {
+              width: 100%;
+            }
+
+            &:hover::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
