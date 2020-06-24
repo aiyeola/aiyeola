@@ -161,6 +161,12 @@ header .container .navbar ul li a:hover::before {
   width: 100%;
 }
 
+#my-scrollbar {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+}
+
 .about .container h2.title, .my-work .container h2.title, footer .container h2.title {
   font-size: 30px;
   font-weight: 700;
@@ -184,7 +190,7 @@ header .container .navbar ul li a:hover::before {
 }
 
 header .container .navbar ul li a::before, .my-work .container .work-content .card .box::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: #eb9321;
   top: 100%;
@@ -289,7 +295,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -312,7 +318,7 @@ body {
 }
 
 .home::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
@@ -398,7 +404,7 @@ body {
 }
 
 .about .container h2.title::before, .my-work .container h2.title::before, footer .container h2.title::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 80px;
   height: 2px;
@@ -445,7 +451,7 @@ body {
   float: left;
   width: 65%;
   padding: 15px;
-  font-family: "Crimson Pro", serif;
+  font-family: 'Crimson Pro', serif;
 }
 
 @media (max-width: 425px) {
@@ -482,7 +488,7 @@ body {
 }
 
 .about .container .about-content .description a, .my-work .container .about-content .description a, footer .container .about-content .description a, .about footer .container .footer-content .description a, footer .about .container .footer-content .description a, .my-work footer .container .footer-content .description a, footer .my-work .container .footer-content .description a, footer .container .footer-content .description a {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .about .container .about-content .description a:hover, .my-work .container .about-content .description a:hover, footer .container .about-content .description a:hover, .about footer .container .footer-content .description a:hover, footer .about .container .footer-content .description a:hover, .my-work footer .container .footer-content .description a:hover, footer .my-work .container .footer-content .description a:hover, footer .container .footer-content .description a:hover, .about .container .about-content .description a:active, .my-work .container .about-content .description a:active, footer .container .about-content .description a:active, .about footer .container .footer-content .description a:active, footer .about .container .footer-content .description a:active, .my-work footer .container .footer-content .description a:active, footer .my-work .container .footer-content .description a:active, footer .container .footer-content .description a:active {

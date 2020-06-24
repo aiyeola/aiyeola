@@ -77,7 +77,8 @@
 						I love to pay attention to details
 					</p>
 					<p>
-						<a href="https://drive.google.com/file/d/1uLeuwz1q1-ud7SM26kEUE_sZyPHZzFc8/view?usp=sharing">Check CV</a>
+						<a href="https://drive.google.com/file/d/1uLeuwz1q1-ud7SM26kEUE_sZyPHZzFc8/view?usp=sharing">Check
+							CV</a>
 					</p>
 				</div>
 			</div>
@@ -87,22 +88,22 @@
 	<section class="my-work" id="work">
 		<div class="container">
 			<h2 class="title">My Work</h2>
-			<h3>Checkout this project...</h3>
+			<h3>Checkout these projects...</h3>
 			<div class="work-content">
 				<div class="card">
-					<!-- <div class="box">
+					<div class="box">
 						<a href="/moscode.html">
-							<h3>Moscode</h3>
-							<h4>Landing Page for Product</h4>
-							<img src="image/portfolio1.jpg" alt="portfolio">
+							<h3>Facebook DevC Internship</h3>
+							<h4>RESTful API</h4>
+							<img src="image/Barnes (2).jpg" alt="portfolio-img">
 						</a>
 						<div class="link-source">
-							<a href="#">
+							<a href="https://github.com/aiyeola/aboyeji-barnes-backstars-nodejs">
 								<i class="fab fa-github"></i>
 								View Source Code
 							</a>
 						</div>
-					</div> -->
+					</div>
 					<div class="box">
 						<a href="https://wcffutminna.herokuapp.com/">
 							<h3>WCF FUTMinna</h3>
@@ -154,7 +155,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script> -->
 	<script>
 		$(() => {
 			var bottom = $("header").outerHeight();
@@ -180,7 +181,44 @@
 				$(this).toggleClass("active")
 				$(".navbar").toggleClass("open")
 			})
-		})
+		});
+
+		// Select all links with hashes
+		$('a[href*="#"]')
+			// Remove links that don't actually link to anything
+			.not('[href="#"]')
+			.not('[href="#0"]')
+			.click(function (event) {
+				// On-page links
+				if (
+					location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+					&&
+					location.hostname == this.hostname
+				) {
+					// Figure out element to scroll to
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					// Does a scroll target exist?
+					if (target.length) {
+						// Only prevent default if animation is actually gonna happen
+						event.preventDefault();
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 100, function () {
+							// Callback after animation
+							// Must change focus!
+							var $target = $(target);
+							$target.focus();
+							if ($target.is(":focus")) { // Checking if the target was focused
+								return false;
+							} else {
+								$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+								$target.focus(); // Set focus again
+							};
+						});
+					}
+				}
+			});
 	</script>
 
 </body>
