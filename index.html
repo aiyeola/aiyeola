@@ -1,226 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>My Portfolio</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-		integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./dist/css/style.css" />
+  </head>
 
-	<link rel="stylesheet" href="./dist/css/style.css">
-</head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="trigger-main">
+          <a href="javascript:void(0)" class="ham-burger">
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <div class="navbar">
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#work">My Work</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-<body>
+    <section class="home" id="home">
+      <div class="container">
+        <div class="home-text">
+          <h1>Victor Aiyeola</h1>
+          <h3>JavaScript Software Developer 😎😎</h3>
+          <div class="icons">
+            <a href="https://web.facebook.com/vickyvayne">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://github.com/aiyeola">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="www.linkedin.com/in/victor-aiyeola">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://twitter.com/victor_aiyeola">
+              <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <a href="https://wa.me/2348182891282">
+              <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<header>
-		<div class="container">
-			<div class="trigger-main">
-				<a href="javascript:void(0)" class="ham-burger">
-					<span></span>
-					<span></span>
-				</a>
-			</div>
-			<div class="navbar">
-				<ul>
-					<li><a href="#home" class="active">Home</a></li>
-					<li><a href="#about">About Me</a></li>
-					<li><a href="#work">My Work</a></li>
-				</ul>
-			</div>
-		</div>
-	</header>
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="title">About Me</h2>
+        <div class="about-content">
+          <div class="img">
+            <img src="./image/passport.jpg" alt="Aiyeola Victor" />
+          </div>
+          <div class="description">
+            <h4>Hi, I'm Aiyeola Victor</h4>
+            <h5>Web Developer based in Lagos, Nigeria</h5>
+            <p>
+              Young JavaScript Software Developer with proficiency in ReactJS as
+              frontEnd technology and NodeJS as a backEnd Technology
+            </p>
+            <p>I love to pay attention to details</p>
+            <p>
+              <a
+                href="https://drive.google.com/file/d/1SimR7e0V01xWawTRYTdQeJ1Eps3JpRG0/view?usp=sharing"
+              >
+                Check CV</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="my-work" id="work">
+      <div class="container">
+        <h2 class="title">My Work</h2>
+        <h3>Checkout these projects...</h3>
+        <div class="work-content">
+          <div class="card">
+            <div class="box">
+              <a href="https://aboyeji-barnes-backstars.herokuapp.com/api/docs">
+                <h3>Facebook DevC Internship</h3>
+                <h4>RESTful API</h4>
+                <img src="image/Barnes (2).jpg" alt="portfolio-img" />
+              </a>
+              <div class="link-source">
+                <a
+                  href="https://github.com/aiyeola/aboyeji-barnes-backstars-nodejs"
+                >
+                  <i class="fab fa-github"></i>
+                  View Source Code
+                </a>
+              </div>
+            </div>
+            <div class="box">
+              <a href="https://wcffutminna.herokuapp.com/">
+                <h3>WCF FUTMinna</h3>
+                <h4>Database Listing</h4>
+                <img src="image/logo.jpg" alt="portfolio" />
+              </a>
+              <div class="link-source">
+                <a href="https://github.com/aiyeola/WCF-FUTMinna">
+                  <i class="fab fa-github"></i>
+                  View Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<section class="home" id="home">
-		<div class="container">
-			<div class="home-text">
-				<h1>Aiyeola Victor</h1>
-				<h3>Web Developer, Programmer & Entrepreneur</h3>
-				<div class="icons">
-					<a href="https://web.facebook.com/vickyvayne">
-						<i class="fab fa-facebook fa-2x"></i>
-					</a>
-					<a href="https://github.com/aiyeola">
-						<i class="fab fa-github fa-2x"></i>
-					</a>
-					<a href="www.linkedin.com/in/victor-aiyeola">
-						<i class="fab fa-linkedin fa-2x"></i>
-					</a>
-					<a href="https://twitter.com/aiyeola_victor">
-						<i class="fab fa-twitter fa-2x"></i>
-					</a>
-					<a href="https://wa.me/2348182891282">
-						<i class="fab fa-whatsapp fa-2x"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="box">
+            <div class="icon">
+              <span class="fa fa-phone"></span>
+            </div>
+            <h4>Phone</h4>
+            <p>+2348182891282</p>
+            <p>+2348107567830</p>
+            <p>+2348114517305</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <span class="fa fa-envelope"></span>
+            </div>
+            <h4>Email</h4>
+            <p>aiyeolavictor@gmail.com</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <span class="fa fa-map-marker"></span>
+            </div>
+            <h4>Location</h4>
+            <p>Yetkem Avenue, Ajasa Command, Lagos</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-	<section class="about" id="about">
-		<div class="container">
-			<h2 class="title">About Me</h2>
-			<div class="about-content">
-				<div class="img">
-					<img src="./image/passport.jpg" alt="Aiyeola Victor">
-				</div>
-				<div class="description">
-					<h4>Hi, I'm Aiyeola Victor</h4>
-					<h5>Web Developer based in Lagos, Nigeria</h5>
-					<p>
-						Young JavaScript Software Developer with proficiency in
-						ReactJS as frontEnd technology and NodeJS as a backEnd Technology
-					</p>
-					<p>
-						I love to pay attention to details
-					</p>
-					<p>
-						<a href="https://drive.google.com/file/d/1uLeuwz1q1-ud7SM26kEUE_sZyPHZzFc8/view?usp=sharing">Check
-							CV</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script> -->
+    <script>
+      $(() => {
+        var bottom = $('header').outerHeight();
+        var header = $('header').offset().top + bottom;
 
-	<section class="my-work" id="work">
-		<div class="container">
-			<h2 class="title">My Work</h2>
-			<h3>Checkout these projects...</h3>
-			<div class="work-content">
-				<div class="card">
-					<div class="box">
-						<a href="https://aboyeji-barnes-backstars.herokuapp.com/api/docs">
-							<h3>Facebook DevC Internship</h3>
-							<h4>RESTful API</h4>
-							<img src="image/Barnes (2).jpg" alt="portfolio-img">
-						</a>
-						<div class="link-source">
-							<a href="https://github.com/aiyeola/aboyeji-barnes-backstars-nodejs">
-								<i class="fab fa-github"></i>
-								View Source Code
-							</a>
-						</div>
-					</div>
-					<div class="box">
-						<a href="https://wcffutminna.herokuapp.com/">
-							<h3>WCF FUTMinna</h3>
-							<h4>Database Listing</h4>
-							<img src="image/logo.jpg" alt="portfolio">
-						</a>
-						<div class="link-source">
-							<a href="https://github.com/aiyeola/WCF-FUTMinna">
-								<i class="fab fa-github"></i>
-								View Source Code
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+        // header fixed only when window width greater than 991px
+        if ($(window).width() > 425) {
+          $(window).scroll(() => {
+            if ($(window).scrollTop() >= header) {
+              $('header').addClass('sticky');
+            } else {
+              $('header').removeClass('sticky');
+            }
+          });
+        }
 
-	<footer>
-		<div class="container">
-			<div class="footer-content">
-				<div class="box">
-					<div class="icon">
-						<span class="fa fa-phone"></span>
-					</div>
-					<h4>Phone</h4>
-					<p>+2348182891282</p>
-					<p>+2348107567830</p>
-					<p>+2348114517305</p>
-				</div>
-				<div class="box">
-					<div class="icon">
-						<span class="fa fa-envelope"></span>
-					</div>
-					<h4>Email</h4>
-					<p>aiyeolavictor@gmail.com</p>
-				</div>
-				<div class="box">
-					<div class="icon">
-						<span class="fa fa-map-marker"></span>
-					</div>
-					<h4>Location</h4>
-					<p>Yetkem Avenue, Ajasa Command, Lagos</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+        $('.navbar ul li a').click(function () {
+          $('.navbar ul li a').removeClass('active');
+          $(this).addClass('active');
+        });
 
+        $('.ham-burger').click(function () {
+          $(this).toggleClass('active');
+          $('.navbar').toggleClass('open');
+        });
+      });
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script> -->
-	<script>
-		$(() => {
-			var bottom = $("header").outerHeight();
-			var header = $("header").offset().top + bottom;
-
-			// header fixed only when window width greater than 991px
-			if ($(window).width() > 425) {
-				$(window).scroll(() => {
-					if ($(window).scrollTop() >= header) {
-						$("header").addClass("sticky")
-					} else {
-						$("header").removeClass("sticky")
-					}
-				})
-			}
-
-			$(".navbar ul li a").click(function () {
-				$(".navbar ul li a").removeClass("active")
-				$(this).addClass("active");
-			})
-
-			$(".ham-burger").click(function () {
-				$(this).toggleClass("active")
-				$(".navbar").toggleClass("open")
-			})
-		});
-
-		// Select all links with hashes
-		$('a[href*="#"]')
-			// Remove links that don't actually link to anything
-			.not('[href="#"]')
-			.not('[href="#0"]')
-			.click(function (event) {
-				// On-page links
-				if (
-					location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-					&&
-					location.hostname == this.hostname
-				) {
-					// Figure out element to scroll to
-					var target = $(this.hash);
-					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-					// Does a scroll target exist?
-					if (target.length) {
-						// Only prevent default if animation is actually gonna happen
-						event.preventDefault();
-						$('html, body').animate({
-							scrollTop: target.offset().top
-						}, 100, function () {
-							// Callback after animation
-							// Must change focus!
-							var $target = $(target);
-							$target.focus();
-							if ($target.is(":focus")) { // Checking if the target was focused
-								return false;
-							} else {
-								$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-								$target.focus(); // Set focus again
-							};
-						});
-					}
-				}
-			});
-	</script>
-
-</body>
-
+      // Select all links with hashes
+      $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+          // On-page links
+          if (
+            location.pathname.replace(/^\//, '') ==
+              this.pathname.replace(/^\//, '') &&
+            location.hostname == this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              $('html, body').animate(
+                {
+                  scrollTop: target.offset().top,
+                },
+                100,
+                function () {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(':focus')) {
+                    // Checking if the target was focused
+                    return false;
+                  } else {
+                    $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                  }
+                }
+              );
+            }
+          }
+        });
+    </script>
+  </body>
 </html>
