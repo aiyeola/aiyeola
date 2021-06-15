@@ -1,8 +1,8 @@
-### Hi there, I'm Victor
+### Hi there, I'm Victor 🙋🏽‍♂️
 
 I'm a Software Developer, I'm passionate about sharing knowledge, documentation, web engineering, Jamstack, headless commerce, and open source.
 
-- 💬 Ask me about: Documentation, Web Engineering, JAMstack, Headless Commerce, Communities, and FOSS.
+- 💬 Ask me about: JavaScript, JAMstack, Headless Commerce, and Communities
 - 📫 How to reach me: DM [@victor_aiyeola](https://twitter.com/victor_aiyeola)
 - 😊 Pronouns: He/him
 
