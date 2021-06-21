@@ -1,14 +1,15 @@
 ### Hi there, I'm Victor 🙋🏽‍♂️
 
-I'm a Software Developer, I'm passionate about sharing knowledge, documentation, web engineering, Jamstack, headless commerce, and open source.
+I'm a Software Developer, I'm passionate about sharing knowledge, building systems, and open source.
 
-- 💬 Ask me about: JavaScript, JAMstack, Headless Commerce, and Communities
+- 💬 Ask me about: JavaScript, ReactJS, Next.JS and Headless Commerce.
 - 📫 How to reach me: DM [@victor_aiyeola](https://twitter.com/victor_aiyeola)
 - 😊 Pronouns: He/him
 
 ### Useful Links 🌻
 
 - [Personal website](https://aiyeola.dev)
+- [Facebook](https://aiyeola.dev)
 - [Twitter](https://twitter.com/victor_aiyeola)
 - [Instagram](https://www.instagram.com/victor_aiyeola/)
 - [LinkedIn](https://www.linkedin.com/in/victor-aiyeola/)
