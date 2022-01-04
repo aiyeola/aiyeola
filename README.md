@@ -2,7 +2,7 @@
 
 I'm a Software Developer, I'm passionate about sharing knowledge, building systems, and open source.
 
-- 💬 Ask me about: JavaScript, ReactJS, Next.JS and Headless Commerce.
+- 💬 Ask me about: JavaScript, ReactJS, Next.JS and NodeJS.
 - 📫 How to reach me: DM [@victor_aiyeola](https://twitter.com/victor_aiyeola)
 - 😊 Pronouns: He/him
 
